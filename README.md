@@ -22,23 +22,31 @@ Where the profile goes:
 - Codex: `~/.codex/AGENTS.md`, or `AGENTS.md` in one project folder.
 
 Keep it under a page, and once a month ask Claude to review it against your recent chats. More in
-[profile-interview-prompt.md](profile-interview-prompt.md). The prompt comes from Kareem Hegazy's
+[prompts/profile-interview.md](prompts/profile-interview.md). The prompt comes from Kareem Hegazy's
 workshop "Working with Claude: a practical guide for researchers" (ICSI, June 2026).
+
+## What is where
+
+- `prompts/`: the profile-interview prompt.
+- `skills/`: the three skills, one folder each, for Claude Code (also Codex and Gemini CLI).
+- `claude-ai-uploads/`: the same three skills zipped for claude.ai, which accepts a skill only as a
+  zip upload. Its copies of answer-key and office-hours say in their descriptions when to run,
+  because claude.ai does not accept the "run only when typed" setting.
 
 ## The three skills
 
 | Skill | What it does | Claude Code | claude.ai |
 |-------|--------------|-------------|-----------|
-| sci-plot | House style for scientific figures: the exact formula in red on the simulation in blue, readable at the size it will be shown, no text on the data. Claude uses it whenever it plots. | [SKILL.md](claude-code/skills/sci-plot/SKILL.md) | [sci-plot.zip](claude-ai/sci-plot.zip) |
-| answer-key | Complete worked answers at once, like the solutions at the back of the book. | [SKILL.md](claude-code/skills/answer-key/SKILL.md) | [answer-key.zip](claude-ai/answer-key.zip) |
-| office-hours | A tutor who asks questions, gives one hint at a time, and never hands over the answer. | [SKILL.md](claude-code/skills/office-hours/SKILL.md) | [office-hours.zip](claude-ai/office-hours.zip) |
+| sci-plot | House style for scientific figures: the exact formula in red on the simulation in blue, readable at the size it will be shown, no text on the data. Claude uses it whenever it plots. | [SKILL.md](skills/sci-plot/SKILL.md) | [sci-plot.zip](claude-ai-uploads/sci-plot.zip) |
+| answer-key | Complete worked answers at once, like the solutions at the back of the book. | [SKILL.md](skills/answer-key/SKILL.md) | [answer-key.zip](claude-ai-uploads/answer-key.zip) |
+| office-hours | A tutor who asks questions, gives one hint at a time, and never hands over the answer. | [SKILL.md](skills/office-hours/SKILL.md) | [office-hours.zip](claude-ai-uploads/office-hours.zip) |
 
 Read a skill before you install it: it is someone else's instructions running in your agent with
 your permissions. Each one is a single short `SKILL.md` file.
 
 ## Install in Claude Code
 
-Copy the three folders in `claude-code/skills/` into `.claude/skills/` inside a project folder (that
+Copy the three folders in `skills/` into `.claude/skills/` inside a project folder (that
 project only) or into `~/.claude/skills/` (all your projects). If Claude Code is running, restart it,
 then type `/skills` to check that they are listed.
 
@@ -49,7 +57,7 @@ then type `/skills` to check that they are listed.
 ## Install in claude.ai (the free plan works)
 
 1. Settings > Capabilities: turn on "Code execution and file creation". Skills need it.
-2. Customize > Skills > + > Create skill > Upload a skill, once for each zip in `claude-ai/`.
+2. Customize > Skills > + > Create skill > Upload a skill, once for each zip in `claude-ai-uploads/`.
 3. Start a new chat with "Answer key: <your question>" or "Office hours: <your question>".
    sci-plot is used whenever Claude makes a figure.
 
@@ -58,5 +66,5 @@ copies of answer-key and office-hours say in their descriptions when to use them
 
 ## Codex and Gemini CLI
 
-The same `SKILL.md` files work there. Put the folders from `claude-code/skills/` in `.agents/skills/`
+The same `SKILL.md` files work there. Put the folders from `skills/` in `.agents/skills/`
 inside your project folder.
