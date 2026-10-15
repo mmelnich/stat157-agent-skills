@@ -1,6 +1,6 @@
 # Stat 157: agent skills and a personal profile
 
-From the lecture "Using agents to deal with high dimensions" by Maksim Melnichenko and Kareem Hegazy
+From the lecture "Using agents to deal with high dimensions" by Kareem Hegazy and Maksim Melnichenko
 (UC Berkeley, Stat 157, Fall 2026).
 
 **Download everything as a zip:**
