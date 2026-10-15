@@ -12,7 +12,7 @@ A profile tells Claude who you are and how you want it to work, once, instead of
 fresh chat, paste:
 
 ```text
-Help me build a persistent context profile. Ask ONE question at a time about: my role and courses; my code stack; my accuracy standards; preferred output format; what you should NEVER do; standing rules. Validate each answer. End with a complete Markdown profile in my exact words.
+Help me build a persistent context profile. Ask ONE question at a time about: my role and courses; my code stack; my accuracy standards; preferred output format; what you should NEVER do; standing rules. Validate each answer. End with a complete Markdown profile in my exact words, and save it as ~/.claude/CLAUDE.md; if that file already exists, show me the changes and ask before overwriting it. If you cannot write files, tell me where to paste the profile instead.
 ```
 
 Where the profile goes:
