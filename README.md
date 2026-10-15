@@ -29,7 +29,7 @@ workshop "Working with Claude: a practical guide for researchers" (ICSI, June 20
 
 - `prompts/`: the profile-interview prompt.
 - `skills/`: the three skills, one folder each, for Claude Code (also Codex and Gemini CLI).
-- `claude-ai-uploads/`: the same three skills zipped for claude.ai, which accepts a skill only as a
+- `claude-ai-uploads/`: the same three skills zipped for claude.ai (Claude in the browser), which accepts a skill only as a
   zip upload. Its copies of answer-key and office-hours say in their descriptions when to run,
   because claude.ai does not accept the "run only when typed" setting.
 
@@ -43,6 +43,33 @@ workshop "Working with Claude: a practical guide for researchers" (ICSI, June 20
 
 Read a skill before you install it: it is someone else's instructions running in your agent with
 your permissions. Each one is a single short `SKILL.md` file.
+
+## Add-ons worth installing
+
+Free add-ons for Claude Code, by category. Plugins install from inside Claude Code with
+`/plugin install <name>@claude-plugins-official` (the official marketplace is preloaded). Read what
+you install: a plugin or skill runs with your permissions.
+
+| Name | Kind | What it does | Install |
+|------|------|--------------|---------|
+| **Correctness signal** | | | |
+| clangd-lsp | plugin, first-party | C/C++ diagnostics on every edit; find references | `/plugin install clangd-lsp@claude-plugins-official` |
+| pyright-lsp | plugin, first-party | Same for Python (type and import errors) | `/plugin install pyright-lsp@claude-plugins-official` |
+| context7 | MCP server, community | Current, version-specific library docs | `/plugin install context7@claude-plugins-official` |
+| **Discipline, review, cleanup** | | | |
+| superpowers | plugin, community | Spec, failing test, implement, debug | `/plugin install superpowers@claude-plugins-official` |
+| code-review | plugin, first-party | Multi-agent PR review, confidence-scored | `/plugin install code-review@claude-plugins-official` |
+| code-simplifier | plugin, first-party | Behavior-preserving cleanup of new code | `/plugin install code-simplifier@claude-plugins-official` |
+| security-guidance | plugin, first-party | Flags injection, unsafe deserialization, leaked secrets | `/plugin install security-guidance@claude-plugins-official` |
+| **Tokens and cost** | | | |
+| [codeburn](https://github.com/getagentseal/codeburn) | CLI tool, open source | Token and cost meter for 31 tools, local only | `npx codeburn` in a terminal |
+| [caveman](https://github.com/JuliusBrussee/caveman) | skill, community | Terse output, about two-thirds fewer tokens | `/plugin marketplace add JuliusBrussee/caveman`, then `/plugin install caveman@caveman` |
+| **Workflow** | | | |
+| commit-commands | plugin, first-party | `/commit`, push, full PR in one bundle | `/plugin install commit-commands@claude-plugins-official` |
+| skill-creator | plugin, first-party | Scaffold, evaluate and audit your own skills | `/plugin install skill-creator@claude-plugins-official` |
+
+The catch: of 3,984 public skills that Snyk audited in 2026, 36.8% had a flaw and 76 carried
+malware ([ToxicSkills](https://snyk.io/blog/toxicskills-malicious-ai-agent-skills-clawhub/)).
 
 ## Install in Claude Code
 
