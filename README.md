@@ -6,6 +6,9 @@ From the lecture "Using agents to deal with high dimensions" by Kareem Hegazy an
 **Download everything as a zip:**
 [stat157-agent-skills-main.zip](https://github.com/mmelnich/stat157-agent-skills/archive/refs/heads/main.zip)
 
+**Slides of the lecture:**
+[slides/2026-10-15-using-agents-high-dimensions.pdf](slides/2026-10-15-using-agents-high-dimensions.pdf)
+
 ## Build your profile: let Claude interview you
 
 A profile tells Claude who you are and how you want it to work, once, instead of in every chat. In a
@@ -27,6 +30,7 @@ workshop "Working with Claude: a practical guide for researchers" (ICSI, June 20
 
 ## What is where
 
+- `slides/`: the lecture slides (PDF).
 - `prompts/`: the profile-interview prompt.
 - `skills/`: the three skills, one folder each, for Claude Code (also Codex and Gemini CLI).
 - `claude-ai-uploads/`: the same three skills zipped for claude.ai (Claude in the browser), which accepts a skill only as a
